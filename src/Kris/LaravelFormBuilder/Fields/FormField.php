@@ -261,10 +261,7 @@ abstract class FormField
 
         $this->setOption('wrapperAttrs', $helper->prepareAttributes($this->getOption('wrapper')));
         $this->setOption('errorAttrs', $helper->prepareAttributes($this->getOption('errors')));
-
-        if ($this->getOption('is_child')) {
-            $this->setOption('labelAttrs', $helper->prepareAttributes($this->getOption('label_attr')));
-        }
+        $this->setOption('labelAttrs', $helper->prepareAttributes($this->getOption('label_attr')));
 
         if ($this->getOption('help_block.text')) {
             $this->setOption(
